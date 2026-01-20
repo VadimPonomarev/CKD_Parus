@@ -6,6 +6,7 @@ import Headerpicture from '@/components/headerpicture/headerpicture';
 import HeaderMenu from '@/components/menu/headermenu';
 import Poster from '@/components/poster/poster';
 import News from '@/components/news/news';
+import Links from '@/components/links/links';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Stack gap={20} pt={20}>
         <Poster />
         <News />
+        <Links />
       </Stack>
     </Box>
   );

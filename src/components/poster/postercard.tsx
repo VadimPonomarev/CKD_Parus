@@ -30,42 +30,43 @@ const PosterCard: React.FC<PosterCardProps> = ({
   linkUrl = '#',
   linkText = 'Подробнее',
   imageProps,
-  className,
 }) => {
   return (
-    <Stack w={200} className={className}>
-      <Text fontSize={20} fontWeight="semibold">
-        {title}
-      </Text>
-      <Text fontSize={16} color="gray.500">
-        {date}
-      </Text>
+    <Center>
+      <Stack w={200}>
+        <Text fontSize={20} fontWeight="semibold">
+          {title}
+        </Text>
+        <Text fontSize={16} color="gray.500">
+          {date}
+        </Text>
 
-      <Center>
-        <Image
-          src={image}
-          alt={alt}
-          w="100%"
-          h="150px"
-          objectFit="cover"
-          borderRadius="md"
-          {...imageProps}
-        />
-      </Center>
+        <Center>
+          <Image
+            src={image}
+            alt={alt}
+            w="100%"
+            h="150px"
+            objectFit="cover"
+            borderRadius="md"
+            {...imageProps}
+          />
+        </Center>
 
-      <Text fontSize={16} textAlign="justify">
-        {description}
-      </Text>
-      <Link
-        href={linkUrl}
-        fontSize={16}
-        color="blue.500"
-        textDecoration="underline"
-        _hover={{ color: 'blue.600', textDecoration: 'none' }}
-      >
-        {linkText}
-      </Link>
-    </Stack>
+        <Text fontSize={16} textAlign="justify">
+          {description}
+        </Text>
+        <Link
+          href={linkUrl}
+          fontSize={16}
+          color="blue.500"
+          textDecoration="underline"
+          _hover={{ color: 'blue.600', textDecoration: 'none' }}
+        >
+          {linkText}
+        </Link>
+      </Stack>
+    </Center>
   );
 };
 

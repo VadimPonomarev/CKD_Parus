@@ -10,13 +10,14 @@ import {
 } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import NewsCard from './newscard';
+import HeaderPicture from '@/img/HeaderPicture.jpg';
 
 // Генерируем тестовые данные для новостей
 const NEWS_DATA = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
   title: `Новость ${i + 1}: Важное событие в культурной жизни города`,
-  date: `${i + 1} декабря 2024`,
-  image: `https://picsum.photos/200/300?random=${i + 100}`,
+  date: `${i + 1} января 2026`,
+  image: HeaderPicture.src,
   description: `Краткое описание новости ${i + 1}. Это значимое событие в культурной жизни нашего города, которое заслуживает внимания.`,
 }));
 

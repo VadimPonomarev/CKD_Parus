@@ -9,13 +9,14 @@ import {
 } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import PosterCard from './postercard';
+import HeaderPicture from '@/img/HeaderPicture.jpg';
 
 // Генерируем тестовые данные
 const POSTER_DATA = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
   title: `Мероприятие ${i + 1}`,
-  date: '25 декабря 2024',
-  image: `https://picsum.photos/200/300?random=${i + 1}`,
+  date: '19 января 2026',
+  image: HeaderPicture.src,
 }));
 
 const Poster = () => {

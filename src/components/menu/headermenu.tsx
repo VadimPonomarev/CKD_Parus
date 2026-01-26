@@ -407,7 +407,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ title, items, href }) => {
   };
 
   return (
-    <div
+    <Box
       style={{ position: 'relative' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -448,7 +448,7 @@ const MainMenu: React.FC<MainMenuProps> = ({ title, items, href }) => {
           </Portal>
         )}
       </Menu.Root>
-    </div>
+    </Box>
   );
 };
 
@@ -496,7 +496,7 @@ const CollectivesMenu: React.FC = () => {
   const groupedItems = teams.length > 0 ? groupTeamsByCategories(teams) : [];
 
   return (
-    <div
+    <Box
       style={{ position: 'relative' }}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -567,7 +567,7 @@ const CollectivesMenu: React.FC = () => {
           </Portal>
         )}
       </Menu.Root>
-    </div>
+    </Box>
   );
 };
 

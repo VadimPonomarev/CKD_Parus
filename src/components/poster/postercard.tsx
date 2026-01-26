@@ -32,7 +32,16 @@ const PosterCard: React.FC<PosterCardProps> = ({
   imageProps,
 }) => {
   return (
-    <Center>
+    <Center
+      p={5}
+      borderRadius="10px"
+      boxShadow="sm"
+      borderColor="gray.100"
+      _hover={{
+        boxShadow: '2xl',
+        transition: 'box-shadow 0.3s ease-in-out',
+      }}
+    >
       <Stack w={200}>
         <Text fontSize={20} fontWeight="semibold">
           {title}

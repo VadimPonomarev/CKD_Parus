@@ -9,14 +9,13 @@ import {
 } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import PosterCard from './postercard';
-import HeaderPicture from '@/img/HeaderPicture.jpg';
 
 // Генерируем тестовые данные
 const POSTER_DATA = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
   title: `Мероприятие ${i + 1}`,
   date: '19 января 2026',
-  image: HeaderPicture.src,
+  image: 'HeaderPicture.jpg',
 }));
 
 const Poster = () => {
@@ -71,7 +70,7 @@ const Poster = () => {
       <Text fontSize="2xl" fontWeight="bold">
         Афиша
       </Text>
-      <Separator />
+      <Separator bgColor="whiteAlpha.500" />
 
       <HStack width="100%" justify="space-between" align="center">
         {/* Кнопка назад */}
@@ -81,7 +80,6 @@ const Poster = () => {
           disabled={currentIndex === 0}
           variant="ghost"
           size="lg"
-          _hover={{ bg: 'gray.100' }}
           visibility={currentIndex === 0 ? 'hidden' : 'visible'}
           opacity={currentIndex === 0 ? 0 : 1}
           transition="all 0.2s ease"
@@ -97,13 +95,9 @@ const Poster = () => {
           position="relative"
           flex="1"
         >
-          <HStack width="100%" justify="space-between">
+          <HStack width="100%" justify="space-between" p={5}>
             {visibleItems.map(item => (
-              <Box
-                key={item.id}
-                flexShrink={0}
-                width={`${100 / maxVisibleItems}%`}
-              >
+              <Box key={item.id}>
                 <PosterCard
                   title={item.title}
                   date={item.date}
@@ -121,7 +115,6 @@ const Poster = () => {
           disabled={currentIndex >= totalItems - maxVisibleItems}
           variant="ghost"
           size="lg"
-          _hover={{ bg: 'gray.100' }}
           visibility={
             currentIndex >= totalItems - maxVisibleItems ? 'hidden' : 'visible'
           }

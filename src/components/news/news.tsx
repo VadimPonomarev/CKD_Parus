@@ -1,4 +1,3 @@
-// components/news.tsx
 import { useState, useRef } from 'react';
 import {
   HStack,
@@ -10,14 +9,12 @@ import {
 } from '@chakra-ui/react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 import NewsCard from './newscard';
-import HeaderPicture from '@/img/HeaderPicture.jpg';
 
-// Генерируем тестовые данные для новостей
 const NEWS_DATA = Array.from({ length: 8 }, (_, i) => ({
   id: i + 1,
   title: `Новость ${i + 1}: Важное событие в культурной жизни города`,
   date: `${i + 1} января 2026`,
-  image: HeaderPicture.src,
+  image: 'HeaderPicture.jpg',
   description: `Краткое описание новости ${i + 1}. Это значимое событие в культурной жизни нашего города, которое заслуживает внимания.`,
 }));
 
@@ -100,13 +97,9 @@ const News = () => {
           position="relative"
           flex="1"
         >
-          <HStack width="100%" justify="space-between">
+          <HStack width="100%" justify="space-between" p={5}>
             {visibleItems.map(item => (
-              <Box
-                key={item.id}
-                flexShrink={0}
-                width={`${100 / maxVisibleItems}%`}
-              >
+              <Box key={item.id}>
                 <NewsCard
                   title={item.title}
                   date={item.date}
